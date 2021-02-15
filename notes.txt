@@ -1,0 +1,4 @@
+Specificity
+
+inline style > id > class > pseudo selector > tag
+1pc = 12pt, 1em = 16px, 1vw = 1% of viewport width

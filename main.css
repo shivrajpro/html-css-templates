@@ -1,100 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;    
+    font-family: sans-serif;
 }
 
-.site-header{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(57deg, #00c6a7, #1e4d92);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75% , 0% 100%);
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/img-2.jpg);
+    background-size: cover;
 }
 
-nav{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    color: white;
-}
-
-.logo{ 
-    width: 50%;
-    line-height: 100px;
-    text-align: center;
-}
-
-.logo h1{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
-.menu{
-    width: 50%;
-    height: 100px;
-}
-
-.menu ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-}
-
-.menu ul li{
-    list-style: none;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-section{
-    display: flex;
-}
-
-.leftside{
-    width: 45%;
-    height: auto;
-    overflow: hidden;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.leftside img{
-    width: 600px;
-    height: 500px;
-}
-
-.rightside{
-    width: 55%;
-    height: 300px;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    margin-top: 80px;
-}
-
-.rightside h1{
-    font-size: 3.2rem;
-    text-transform: uppercase;
-}
-
-.rightside p{
-    font-size: 1.1rem;
-    padding: 30px 0;
-}
-
-.rightside button{
-    font-size: 1.2rem;
-    padding: 20px 35px;
+.container{
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background: #fff;
     border-radius: 4px;
-    background: linear-gradient(57deg, #00c6a7, #1e4d92);
-    color: white;
+    margin: 8% auto;
+    overflow: hidden;
+}
+
+h3{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.container form{
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px;
+    border: 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button{
+    width: 110px;
+    height: 35px;
+    background:linear-gradient(to right, #ff105f,#ffad06);
+    border-radius: 30px;
+    border: 0;
+    margin: 0 10px;
+    outline: none;
     cursor: pointer;
 }
 
-.rightside button:hover{
-    background: linear-gradient(57deg, #1e4d92, #00c6a7);
+#form2{
+    left: 450px;
+}
+
+#form3{
+    left: 450px;
+}
+
+.step-row{
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -1px 5px -1px #000;
+    position: relative;
+}
+
+.step-col{
+    width: 120px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+#progress{
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background:linear-gradient(to right, #ff105f,#ffad06);
+    transition: 1s;
+    /* clip-path: polygon(0% 0%, 100% 50%, 100% 50%, 0% 100%); */
+}
+
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #ffad06;
+    right: -20px;
+    top: 0;
+    position: absolute;
 }

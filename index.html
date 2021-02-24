@@ -1,91 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Condensed:400,700" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
-	<link rel="stylesheet" href="main.css">
-	<title>Multi Step Form</title>
-</head>
-<body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Autocomplete Search Box</title>
+    <link rel="stylesheet" href="main.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
 
-	<div class="container">
-		<form id="form1">
-			<h3>create account</h3>
-			<input type="text" placeholder="Email" required>
-			<input type="password" placeholder="Password" required>
-			<input type="password" placeholder="Confirm Password" required>
+    <script src="js/app.js"></script>
+    <script src="js/suggestions.js"></script>
 
-			<div class="btn-box">
-				<button type="button" id="next1">Next</button>
-			</div>
-		</form>
-		<form id="form2">
-			<h3>social media</h3>
-			<input type="text" placeholder="Github" required>
-			<input type="text" placeholder="LinkedIn" required>
-			<input type="text" placeholder="Medium" required>
-
-			<div class="btn-box">
-				<button type="button" id="prev1">Prev</button>
-				<button type="button" id="next2">Next</button>
-			</div>
-		</form>
-		<form id="form3">
-			<h3>personal info</h3>
-			<input type="text" placeholder="First Name" required>
-			<input type="text" placeholder="Last Name" required>
-			<input type="text" placeholder="Mobile No." required>
-
-			<div class="btn-box">
-				<button type="button" id="prev2">Prev</button>
-				<button type="submit">Submit</button>
-			</div>
-		</form>
-
-		<div class="step-row">
-			<div id="progress"></div>
-			<div class="step-col"><small>Step 1</small></div>
-			<div class="step-col"><small>Step 2</small></div>
-			<div class="step-col"><small>Step 3</small></div>
-		</div>
-	</div>
-
-	<script>
-		var form1 = document.getElementById("form1");
-		var form2 = document.getElementById("form2");
-		var form3 = document.getElementById("form3");
-
-		var next1 = document.getElementById("next1");
-		var next2 = document.getElementById("next2");
-
-		var prev1 = document.getElementById("prev1");
-		var prev2 = document.getElementById("prev2");
-
-		var progress = document.getElementById("progress");
-
-		next1.onclick = function () {
-			form1.style.left = "-450px";
-			form2.style.left = "40px";
-			progress.style.width = "240px";
-		}
-		
-		prev1.onclick = function () {
-			form1.style.left = "40px";
-			form2.style.left = "450px";
-			progress.style.width = "120px";
-		}
-		
-		next2.onclick = function () {
-			form2.style.left = "-450px";
-			form3.style.left = "40px";
-			progress.style.width = "360px";
-		}
-		
-		prev2.onclick = function () {
-			form2.style.left = "40px";
-			form3.style.left = "450px";
-			progress.style.width = "240px";
-		}
-		</script>
-</body>
+  </body>
 </html>
